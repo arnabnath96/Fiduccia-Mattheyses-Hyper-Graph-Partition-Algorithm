@@ -16,13 +16,13 @@ or
 
 INPUT FORMAT
 ------------
-HyperGraph : *No. of verties*  *No. of hyperedges*
+First Line : *No. of verties(n)* <space> *No. of hyperedges(m)*
 
-For each hyperedge : *No. of vertices in each hyperedge* *list the Node Numbers*
+Next m lines : *No. of vertices in each hyperedge* <space> *list the Node Numbers in that hyperedge*
 
-Area Constraints : *min_val* *max_val*
+last line(area constraint) : *min_val* <space> *max_val*
 
-example : 
+**Example :** 
 
 8 6
 
