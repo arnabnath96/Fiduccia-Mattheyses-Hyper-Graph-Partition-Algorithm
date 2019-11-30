@@ -9,24 +9,33 @@ Since hypergraphs can model electronic circuits well, a hypergraph is often said
 
 HOW TO RUN
 ----------
-## $ gcc hypergraph-partition-FM-Algorithm.c -o fm
-## $ ./fm 
+#### $ gcc hypergraph-partition-FM-Algorithm.c -o fm
+#### $ ./fm 
 or
-## $ ./fm input_file
+#### $ ./fm input_file
 
 INPUT FORMAT
 ------------
 HyperGraph : *No. of verties*  *No. of hyperedges*
+
 For each hyperedge : *No. of vertices in each hyperedge* *list the Node Numbers*
+
 Area Constraints : *min_val* *max_val*
 
 example : 
 8 6
+
 3 0 2 4
+
 3 1 2 3
+
 3 2 4 5
+
 3 5 6 7
+
 2 3 5
+
 2 4 6
+
 3 5
 
