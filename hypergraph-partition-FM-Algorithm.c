@@ -81,7 +81,7 @@ int TE(int nodeid){
 				te+=flag;
 			}   
         }
-		//printf("fs(%d)=%d\n",nodeid,te);
+		//printf("te(%d)=%d\n",nodeid,te);
     return te;
 }
 
@@ -144,8 +144,7 @@ void input_from_file(char file_name[]){
 
 void input_cli(){
     int temp1,temp2;		
-	//read_file();
-
+	
 	printf("# of Nodes:\t");
 	scanf("%d",&vertex);
 	printf("# of Nets:\t");
@@ -168,13 +167,9 @@ void input_cli(){
 void init_random_partition(){
     for(int i=0;i<vertex;i++)
 		partition[i]=i%2;
-    
-    //partition[0]=partition[2]=partition[3]=partition[6]=0;
-    //partition[1]=partition[4]=partition[5]=partition[7]=1;
-    
     for(int i=0;i<vertex;i++)
-	    if(partition[i]==0) curr_part[0]++;
-        else    curr_part[1]++;
+	if(partition[i]==0) curr_part[0]++;
+	else    curr_part[1]++;
 }
 
 void display(){
@@ -196,16 +191,6 @@ void calulate_gain_all(){
 }
 
 void calulate_gain(int t){
-    
-    /*
-    printf("V=%c Neighbour=",'a'+t);
-    for(int i=0;i<net;i++)
-        for(int j=0;j<vertex;j++)
-            if(matrix[i][t]==1 && matrix[i][j]==1 && j!=t)
-                printf("%c ",'a'+j);
-    
-    printf("\n");
-    */
     for(int i=0;i<net;i++)
     {
         if(matrix[i][t]==1)
@@ -220,16 +205,11 @@ void print_gain(){
     for(int i=0;i<vertex;i++)
 		printf("%d\t",node[i].gain);
     printf("\n");    
-    //for(int i=0;i<vertex;i++)
-	//	printf("%d\t",node[i].nodeid);
-    //printf("\n");
+
     printf("Node :\t");    
     for(int i=0;i<vertex;i++)
 		printf("%c\t",'a'+node[i].nodeid);    
     printf("\n");    
-    //for(int i=0;i<vertex;i++)
-	//	printf("%d\t",partition[node[i].nodeid]);    
-    //printf("\n");    
 }
 
 void printPartion(){
@@ -240,7 +220,6 @@ void printPartion(){
 
 void update_optimal_partition()
 {
-    //rintf("gain till now %d\n",gain_till_now);
     if(gain_till_now > optimal_partition)
     {
         optimal_partition=gain_till_now; 
@@ -285,7 +264,6 @@ int main(int argc, char *argv[])
     print_gain();
     moveToPartition();
     
-    //printf("-----------------\n");
     qsort(node, vertex, sizeof(struct Node), compare2);
     //print_gain();
     printCurrentPartition();
