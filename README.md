@@ -14,14 +14,15 @@ $ ./fm
 ```
 or
 ```
+$ gcc hypergraph-partition-FM-Algorithm.c -o fm
 $ ./fm input_file
 ```
 
-INPUT FORMAT
+INPUT_FILE FORMAT
 ------------
 First Line : *No. of verties(n)* (space) *No. of hyperedges(m)*
 
-Next m lines : *No. of vertices in each hyperedge* (space) *list the Node Numbers in that hyperedge*
+Next m lines : *No. of vertices in each hyperedge* (space) *list of the Node Numbers in that hyperedge seperated by space*
 
 last line(area constraint) : *min_val* (space) *max_val*
 
@@ -42,3 +43,8 @@ last line(area constraint) : *min_val* (space) *max_val*
 2 4 6
 
 3 5
+
+HOW THE ALGORITHM WORKS
+-----------------------
+
+Reference : (http://limsk.ece.gatech.edu/book/slides/pdf/FM-partitioning.pdf)
