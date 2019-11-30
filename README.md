@@ -8,19 +8,22 @@ A hypergraph is a generalization of a graph in which an edge can join any number
 
 HOW TO RUN
 ----------
-**$ gcc hypergraph-partition-FM-Algorithm.c -o fm**
-**$ ./fm**
+```
+$ gcc hypergraph-partition-FM-Algorithm.c -o fm
+$ ./fm
+```
 or
-**$ ./fm input_file**
-
+```
+$ ./fm input_file
+```
 
 INPUT FORMAT
 ------------
-First Line : *No. of verties(n)* <space> *No. of hyperedges(m)*
+First Line : *No. of verties(n)* (space) *No. of hyperedges(m)*
 
-Next m lines : *No. of vertices in each hyperedge* <space> *list the Node Numbers in that hyperedge*
+Next m lines : *No. of vertices in each hyperedge* (space) *list the Node Numbers in that hyperedge*
 
-last line(area constraint) : *min_val* <space> *max_val*
+last line(area constraint) : *min_val* (space) *max_val*
 
 **Example :** 
 
