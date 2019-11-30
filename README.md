@@ -39,4 +39,3 @@ last line(area constraint) : *min_val* <space> *max_val*
 2 4 6
 
 3 5
-
